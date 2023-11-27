@@ -11,58 +11,66 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.white,
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        body: Stack(
           children: [
-            Padding(
-              padding: EdgeInsets.only(left: 35, top: 100),
-              child: Text(
-                'Welcome To',
-                style: GoogleFonts.poppins(
-                  fontSize: 28,
-                  fontWeight: FontWeight.w400,
-                  color: Colors.black,
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 35),
-              child: RichText(
-                text: TextSpan(
-                  children: [
-                    TextSpan(
-                      text: 'Dipa',
-                      style: TextStyle(
-                        fontSize: 36,
-                        fontWeight: FontWeight.w700,
-                        color: Color(0xFFDAB86B),
-                      ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 35, top: 100),
+                  child: Text(
+                    'Welcome To',
+                    style: GoogleFonts.poppins(
+                      fontSize: 28,
+                      fontWeight: FontWeight.w400,
+                      color: Color(0xFF8699FF),
                     ),
-                    TextSpan(
-                      text: 'Perpus.',
-                      style: TextStyle(
-                        fontSize: 36,
-                        fontWeight: FontWeight.w700,
-                        color: Color(0xFF8699FF),
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
-              ),
+                Padding(
+                  padding: EdgeInsets.only(left: 35),
+                  child: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'Dipa',
+                          style: TextStyle(
+                            fontSize: 40,
+                            fontWeight: FontWeight.w700,
+                            color: Color(0xFFDAB86B),
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'Perpus.',
+                          style: TextStyle(
+                            fontSize: 40,
+                            fontWeight: FontWeight.w700,
+                            color: Color(0xFF8699FF),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 25),
+                // Gambar ilustrasi
+                Container(
+                  alignment: Alignment.center,
+                  padding: EdgeInsets.all(10),
+                  child: Image.network(
+                    'https://i.imgur.com/OrCFpi8.png',
+                    height: 330,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                // Box Start
+              ],
             ),
-            SizedBox(height: 25),
-            // Gambar ilustrasi
-            Container(
-              alignment: Alignment.center,
-              padding: EdgeInsets.all(10),
-              child: Image.network(
-                'https://i.imgur.com/OrCFpi8.png',
-                height: 330,
-                fit: BoxFit.cover,
-              ),
-            ),
-            // Box deskripsi
-            Expanded(
+            Positioned(
+              top: 530,
+              bottom: 0,
+              left: 0,
+              right: 0,
               child: Container(
                 decoration: BoxDecoration(
                   color: Color(0xFF8699FF),
@@ -79,7 +87,7 @@ class MyApp extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.only(top: 20, left: 20, right: 20),
                         child: Text(
-                          'DipaPerpus membawa perpustakaan universitas ke genggaman Anda. Mulailah petualangan literasi Anda sekarang!',
+                          'DipaPerpus membawa perpustakaan universitas ke genggaman kamu. Mulailah petualangan literasi kamu sekarang!',
                           style: GoogleFonts.poppins(
                             fontSize: 17,
                             color: Colors.white,
@@ -87,7 +95,7 @@ class MyApp extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 70),
+                      SizedBox(height: 50),
                       // Tombol "Buka Buku"
                       ElevatedButton(
                         onPressed: () {
@@ -102,9 +110,10 @@ class MyApp extends StatelessWidget {
                         ),
                         child: Text(
                           'Buka Buku',
-                          style: TextStyle(
-                            fontSize: 18,
+                          style: GoogleFonts.poppins(
+                            fontSize: 24,
                             color: Color(0xFF8699FF),
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                       ),
