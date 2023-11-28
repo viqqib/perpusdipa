@@ -27,7 +27,7 @@ class MyHomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.only(left: 35, top: 100),
+                padding: EdgeInsets.only(left: 35, top: 80),
                 child: Text(
                   'Welcome To',
                   style: GoogleFonts.poppins(
@@ -45,7 +45,7 @@ class MyHomePage extends StatelessWidget {
                       TextSpan(
                         text: 'Dipa',
                         style: TextStyle(
-                          fontSize: 40,
+                          fontSize: 45,
                           fontWeight: FontWeight.w700,
                           color: Color(0xFFDAB86B),
                         ),
@@ -53,7 +53,7 @@ class MyHomePage extends StatelessWidget {
                       TextSpan(
                         text: 'Perpus.',
                         style: TextStyle(
-                          fontSize: 40,
+                          fontSize: 45,
                           fontWeight: FontWeight.w700,
                           color: Color(0xFF8699FF),
                         ),
@@ -77,7 +77,7 @@ class MyHomePage extends StatelessWidget {
             ],
           ),
           Positioned(
-            top: 530,
+            top: 535,
             bottom: 0,
             left: 0,
             right: 0,
@@ -105,7 +105,7 @@ class MyHomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 70),
+                    SizedBox(height: 40),
                     // Tombol "Buka Buku"
                     ElevatedButton(
                       onPressed: () {
