@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'home.dart'; // Make sure to import the home.dart file
 
 class LoginPage extends StatelessWidget {
   @override
@@ -35,13 +36,13 @@ class LoginPage extends StatelessWidget {
                   children: [
                     // "Sign In" text
                     Padding(
-                      padding: EdgeInsets.only(left: 20, bottom: 40),
+                      padding: EdgeInsets.only(left: 20, bottom: 20, top: 20),
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
                           'Sign In',
                           style: GoogleFonts.poppins(
-                            fontSize: 40,
+                            fontSize: 45,
                             color: Color(0xFF8699FF),
                             fontWeight: FontWeight.w500,
                           ),
@@ -56,10 +57,11 @@ class LoginPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'NIM:',
+                            'NIM :',
                             style: GoogleFonts.poppins(
                               fontSize: 22,
-                              color: Colors.grey,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xFF8699FF),
                             ),
                           ),
                           SizedBox(height: 10),
@@ -80,15 +82,15 @@ class LoginPage extends StatelessWidget {
                                 ),
                                 Expanded(
                                   child: TextField(
-                                    style: TextStyle(
-                                      fontSize: 16,
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 17,
                                       color: Colors.black,
                                     ),
                                     decoration: InputDecoration(
                                       hintText: '',
                                       hintStyle: TextStyle(
                                         fontSize: 16,
-                                        color: Colors.grey,
+                                        color: Color(0xFF8699FF),
                                       ),
                                       border: InputBorder.none,
                                     ),
@@ -109,10 +111,11 @@ class LoginPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Password:',
+                            'Password :',
                             style: GoogleFonts.poppins(
                               fontSize: 22,
-                              color: Colors.grey,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xFF8699FF),
                             ),
                           ),
                           SizedBox(height: 10),
@@ -134,8 +137,8 @@ class LoginPage extends StatelessWidget {
                                 Expanded(
                                   child: TextField(
                                     obscureText: true, // for password input
-                                    style: TextStyle(
-                                      fontSize: 16,
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 17,
                                       color: Colors.black,
                                     ),
                                     decoration: InputDecoration(
@@ -158,7 +161,15 @@ class LoginPage extends StatelessWidget {
 
                     // Login button
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        // Navigate to the home page
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  HomePage()), // Replace HomePage with the actual name of your home page class
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         primary: Color(0xFF8699FF), // Mengganti warna button
                         shape: RoundedRectangleBorder(

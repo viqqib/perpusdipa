@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'home.dart';
 import 'login_page.dart'; // Make sure to import the login_page.dart file
 
 void main() {
@@ -44,7 +45,7 @@ class MyHomePage extends StatelessWidget {
                     children: [
                       TextSpan(
                         text: 'Dipa',
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 45,
                           fontWeight: FontWeight.w700,
                           color: Color(0xFFDAB86B),
@@ -52,7 +53,7 @@ class MyHomePage extends StatelessWidget {
                       ),
                       TextSpan(
                         text: 'Perpus.',
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 45,
                           fontWeight: FontWeight.w700,
                           color: Color(0xFF8699FF),
@@ -95,9 +96,9 @@ class MyHomePage extends StatelessWidget {
                   children: [
                     // Deskripsi aplikasi (ganti dengan deskripsi yang sesuai)
                     Padding(
-                      padding: EdgeInsets.only(top: 20, left: 20, right: 20),
+                      padding: EdgeInsets.only(top: 20, left: 20, right: 5),
                       child: Text(
-                        'DipaPerpus membawa perpustakaan universitas ke genggaman kamu. Mulailah petualangan literasi kamu sekarang!',
+                        'DipaPerpus membawa perpustakaan universitas ke genggamanmu. Mulailah petualangan literasi kamu sekarang!',
                         style: GoogleFonts.poppins(
                           fontSize: 20,
                           color: Colors.white,
